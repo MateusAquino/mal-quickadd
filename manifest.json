@@ -1,0 +1,19 @@
+{
+  "name": "MAL QuickAdd",
+  "version": "1.0.0",
+  "description": "Quick add MyAnimeList entries to Todoist.",
+  "author": "MateusAquino",
+  "icons": {
+    "48": "quickadd.png"
+  },
+  "permissions": [],
+  "host_permissions": ["https://myanimelist.net/*"],
+  "content_scripts": [
+    {
+      "matches": [ "https://myanimelist.net/anime/*" ],
+      "js": [ "content.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 3
+}
